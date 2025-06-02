@@ -1,3 +1,16 @@
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+function showTime() {
+	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+}
+showTime();
+setInterval(function () {
+	showTime();
+}, 1000);
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -79,8 +92,8 @@
         
         /* Sticker positions */
         .sticker.moon {
-            top: 10px;
-            left: 10px;
+            top: 20px;
+            left: 20px;
             width: 50px;
             transform: rotate(-15deg);
         }
@@ -93,7 +106,7 @@
         }
         
         .sticker.keyboard {
-            bottom: 10px;
+            bottom: 200px;
             left: 10px;
             width: 50px;
             transform: rotate(-10deg);
@@ -107,28 +120,21 @@
         }
         
         .sticker.watch {
-            bottom: 10px;
+            bottom: 200px;
             right: 10px;
             width: 55px;
             transform: rotate(-15deg);
         }
         
         .sticker.heart {
-            top: 20%;
-            right: 0;
+            top: 10%;
+            right: 10;
             width: 40px;
             transform: rotate(10deg);
         }
         
-        .sticker.rainbow {
-            top: 15%;
-            left: 0;
-            width: 60px;
-            transform: rotate(-5deg);
-        }
-        
         .sticker.cat {
-            bottom: 20%;
+            bottom: 10%;
             right: 0;
             width: 60px;
             transform: rotate(5deg);
@@ -158,7 +164,7 @@
         }
         
         .arrow {
-            font-size: 30px;
+            font-size: 50px;
             margin-top: 20px;
             cursor: pointer;
             animation: bounce 2s infinite;
@@ -211,7 +217,6 @@
     <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" class="sticker keyboard" alt="Sticker bàn phím">
     <img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png" class="sticker music" alt="Sticker máy nghe nhạc">
     <img src="https://cdn-icons-png.flaticon.com/512/535/535183.png" class="sticker heart" alt="Sticker trái tim">
-    <img src="https://cdn-icons-png.flaticon.com/512/7406/7406469.png" class="sticker rainbow" alt="Sticker cầu vồng">
     <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="sticker cat" alt="Sticker mèo">
     <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="sticker star" alt="Sticker ngôi sao">
     
@@ -223,7 +228,7 @@
         <div class="content" id="part1">
             <h1>Bạn nhỏ xin chaoooooo!</h1>
             <p>Xem em làm được gì neeeeee!</p>
-            <button class="btn" onclick="showPart2()">NHẤN DÔ I NHẤN DÔ I</button>
+            <button class="btn" onclick="showPart2()">NHẤN DÔ IIIII</button>
         </div>
         
         <!-- Phần 2: Lời mời -->
@@ -234,7 +239,7 @@
                 <button class="btn" id="noBtn" onclick="showAngry()">Kó</button>
             </div>
             <div id="angryMessage" class="hidden angry-message">
-                ANH HẾC IU EM GÒY TRỨ RÌ!!!!! 😠 😠
+                ANH HẾC IU EM GÒY TRỨ RÌ!!!!! 
             </div>
         </div>
         
@@ -248,8 +253,8 @@
         <div class="content hidden" id="part4">
             <h1>Choa ck chọn plan i chơi với ngdep:</h1>
             <div>
-                <button class="btn" onclick="showFinal('i đua xe ụn ụn gòy i ăn')">1. Đi chơi đua xe rồi đi ăn</button>
-                <button class="btn" onclick="showFinal('i ăn gòy đi cafe ở quán decor bằng xe motor để checkin')">2. Đi ăn rồi đi cafe ở quán decor bằng xe motor checkin</button>
+                <button class="btn" onclick="showFinal('ụn ụn i chơi game gòy i ăn')">1. Đi chơi game gòy đi ăn</button>
+                <button class="btn" onclick="showFinal('i ăn gòy i cafe checkin')">2. Đi ăn gòy đi cafe checkin</button>
             </div>
         </div>
         
@@ -280,7 +285,7 @@
         function showFinal(option) {
             document.getElementById('part4').classList.add('hidden');
             document.getElementById('final').classList.remove('hidden');
-            document.getElementById('selectedOption').textContent = `Chương trình của chúng ta sẽ là: ${option}.`;
+            document.getElementById('selectedOption').textContent = `Cảm ơn người chơi đã chọn plan: ${option}.`;
         }
         
         function showAngry() {
@@ -296,3 +301,4 @@
     </script>
 </body>
 </html>
+
